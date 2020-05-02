@@ -8,7 +8,8 @@
 최종적으로 목적을 달성하고, 실험실을 탈출하는 게임입니다.
 
 ## 실행 방법
-"BangtalGameProject.exe"파일과 Images, Audios 폴더를 동일한 경로에 두고, "BangtalGameProject.exe"파일을 실행하시면 됩니다.
+"BangtalGameProject.exe"파일과 Images, Audios 폴더를 동일한 경로에 두고, <br>
+"BangtalGameProject.exe"파일을 실행하시면 됩니다.
 
 ## 공략 영상
 -TBD-
