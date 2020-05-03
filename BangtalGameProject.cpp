@@ -28,7 +28,6 @@ ObjectID dir_elevator_up;
 ObjectID dir_elevator_plate_down;
 ObjectID dir_sceen_down;
 
-
 /*
 공통
 */
@@ -179,7 +178,9 @@ int main()
 	sound_init();
 
 	defineCombination(laboratory_3f_flower, laboratory_2f_flask, vaccine);
-	cur_scene =main_scene;
+
+	setLaboratoryScene(3);
+	cur_scene =laboratory_scenes[8];
 	startGame(cur_scene);
 }
 
@@ -709,6 +710,7 @@ void mouseCallback(ObjectID object, int x, int y, MouseAction action)
 				playSound(door_sound);
 				stopSound(current_bgm);
 				hideObject(startButton);
+				setSceneImage(main_scene, "Images/scenes/dark.png");
 				enterSceneChangeCur(main_scene);
 				scene_frame = 0;
 				setTimer(ending_timer, 5.0f);
@@ -1135,7 +1137,6 @@ void showEscapeVideo()
 	//timer callback에서 이어짐
 }
 
-
 void hideLaboratoryObject(int floor)
 {
 	if (floor == 1)
@@ -1460,22 +1461,21 @@ void object_init()
 	//2층
 	laboratory_clock_safe_2f = createObject("Images/safe-gmt-close.png");
 	locateObject(laboratory_clock_safe_2f, laboratory_scenes[8], 80, 220);
-	laboratory_clock_safe_3f = createObject("Images/safe-gmt-close.png");
-	locateObject(laboratory_clock_safe_3f, laboratory_scenes[8], 80, 220);
-
-	laboratory_3f_letter = createObject("Images/letter.png");
-	locateObject(laboratory_3f_letter, laboratory_scenes[8], 80, 220);
-	scaleObject(laboratory_3f_letter, 0.1f);
-
-
-
 	laboratory_2f_plug = createObject("Images/plug.png");
 	locateObject(laboratory_2f_plug, laboratory_scenes[8], 140, 270);
 	scaleObject(laboratory_2f_plug, 0.8f);
 
-
 	laboratory_clock_2f = createObject("Images/clock.png");
-	locateObject(laboratory_clock_2f, laboratory_scenes[8], 140,420);
+	locateObject(laboratory_clock_2f, laboratory_scenes[8], 140, 420);
+
+	//3층
+	laboratory_clock_safe_3f = createObject("Images/safe-gmt-close.png");
+	locateObject(laboratory_clock_safe_3f, laboratory_scenes[8], 80, 220);
+
+	laboratory_3f_letter = createObject("Images/letter.png");
+	locateObject(laboratory_3f_letter, laboratory_scenes[8], 150, 300);
+	scaleObject(laboratory_3f_letter, 0.1f);
+
 
 	laboratory_clock_3f = createObject("Images/clock.png");
 	locateObject(laboratory_clock_3f, laboratory_scenes[8], 140, 420);
