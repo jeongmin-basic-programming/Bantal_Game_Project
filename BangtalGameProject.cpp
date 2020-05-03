@@ -179,8 +179,7 @@ int main()
 
 	defineCombination(laboratory_3f_flower, laboratory_2f_flask, vaccine);
 
-	setLaboratoryScene(3);
-	cur_scene =laboratory_scenes[8];
+	cur_scene =main_scene;
 	startGame(cur_scene);
 }
 
