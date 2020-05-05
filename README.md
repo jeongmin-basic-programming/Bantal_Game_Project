@@ -15,7 +15,9 @@
 
 
 ## Walkthrough
--TBD-
+
+[Walkthrough]
 
 
 [전체 줄거리]:./전체줄거리.md
+[Walkthrough]:https://drive.google.com/file/d/11D_5ZyUXX1AIy3QccUV3Dxtfz0zNGsd0/view?usp=sharing
